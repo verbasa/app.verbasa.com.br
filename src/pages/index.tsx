@@ -1,29 +1,17 @@
-import { Button, Input } from '@chakra-ui/react';
-import { Form } from '@unform/web';
-import Head from 'next/head';
-import React, { useRef } from 'react';
+import { Box, Button, Center, Flex } from '@chakra-ui/react';
 import Layout from '../components/Layout';
+import NextLink from 'next/link';
 
 export default function Home() {
-  const formRef = useRef();
-
-  function handleFormSubmit(data) {
-    console.log(data);
-    return;
-  }
-
   return (
-    <>
-      <Head key="head">
-        <title>Verbasa app</title>
-      </Head>
-
-      <Layout key="HomePage">
-        <Form ref={formRef} onSubmit={handleFormSubmit}>
-          <Input name="name" placeholder="Choose a username" />
-          <Button type="submit">Save</Button>
-        </Form>
-      </Layout>
-    </>
+    <Layout key="HomePage">
+      <Box textAlign="center" py={10} h="100%" w="100%" overflow="hidden">
+        <p>Página inicial de aplicações da Verbasa.</p>
+        <p>Clique na logo para ir para o site.</p>
+        <NextLink href="/rdSignup">
+          <a>Sign Up test page</a>
+        </NextLink>
+      </Box>
+    </Layout>
   );
 }
