@@ -9,7 +9,8 @@ const theme = extendTheme({
     global,
   },
   fonts: {
-    body: 'Open Sans',
+    heading: 'Nunito',
+    body: 'Nunito',
   },
   components: {
     Button,

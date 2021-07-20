@@ -4,8 +4,8 @@ import React from 'react';
 
 export default function Layout({ children }) {
   return (
-    <Box maxW="1120px" mx="auto" p={4}>
-      <Center as="head">
+    <Box w="100vw">
+      <Center as="head" maxW="1120px" mx="auto" pt={10}>
         <a href="https://verbasa.com.br">
           <img src="/img/logo-verbasa.svg" alt="Verbasa logo" width="180px" />
         </a>

@@ -109,7 +109,7 @@ export default function Home() {
           </Center>
           <Box>
             <Heading textAlign="center">Termos e condições de uso</Heading>
-            <Text mt={4}>
+            <Text mt={12}>
               Você está contratando um serviço de avaliação da mesa proprietária
               Verbasa Holding SA. Este é um serviço de avaliação, que garante
               sua entrada na mesa proprietária apenas se passar nos critérios
@@ -178,24 +178,33 @@ export default function Home() {
               ACIMA E QUE PARTICIPA DE UMA AVALIAÇÃO E NÃO UMA CONTRATAÇÃO.
             </Text>
           </Box>
-          <Form
-            name="subscription"
-            ref={formRef}
-            onSubmit={handleSubmit}
-            method="post"
-          >
-            <SimpleGrid columns={{ base: 1, md: 2 }} mt={4} spacing={4}>
-              <MetaInput name="name" placeholder="Nome completo" />
-              <MetaInput name="email" placeholder="E-mail" />
-              <MetaInput name="cpf" placeholder="CPF" />
-              <MetaInput name="plan" defaultValue="nacional" hidden />
-            </SimpleGrid>
-            <Flex justify="center">
-              <Button type="submit" colorScheme="blue">
-                Li e aceito os termos e condições
-              </Button>
-            </Flex>
-          </Form>
+        </Box>
+        <Box bg="blue.500">
+          <Box w={720} mx="auto" py={12} mt={10}>
+            <Form
+              name="subscription"
+              ref={formRef}
+              onSubmit={handleSubmit}
+              method="post"
+            >
+              <Flex width="100%" direction="column">
+                <MetaInput name="name" placeholder="Nome completo" />
+                <MetaInput name="email" placeholder="E-mail" />
+                <MetaInput name="cpf" placeholder="CPF" />
+                <MetaInput name="plan" defaultValue="nacional" hidden />
+
+                <Button
+                  type="submit"
+                  colorScheme="gray"
+                  mt={4}
+                  width="100%"
+                  borderRadius={4}
+                >
+                  Li e aceito os termos e condições
+                </Button>
+              </Flex>
+            </Form>
+          </Box>
         </Box>
       </Layout>
     </>
