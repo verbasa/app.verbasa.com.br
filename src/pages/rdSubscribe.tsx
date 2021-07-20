@@ -9,6 +9,7 @@ import {
   Heading,
   Flex,
 } from '@chakra-ui/react';
+import Head from 'next/head';
 import { Form } from '@unform/web';
 import React, { useCallback, useRef, useState } from 'react';
 import Layout from '../components/Layout';
@@ -26,6 +27,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 // import PDFViewer from 'pdf-viewer-reactjs';
 
 const linkEduzz = 'https://sun.eduzz.com/922109';
+const facebookPixelID = '523637392210523';
 
 export default function Home() {
   const [numPages, setNumPages] = useState(null);
@@ -92,6 +94,22 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '${facebookPixelID}');
+              fbq('track', 'PageView');`,
+          }}
+        />
+      </Head>
       <Layout key="HomePage">
         <Box maxW={720} mx="auto" p={4}>
           <Center py={10} h="100%" w="100%" overflow="hidden">
