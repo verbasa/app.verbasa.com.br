@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <>
       <Layout key="HomePage">
-        <Box w={720} mx="auto">
+        <Box maxW={720} mx="auto" p={4}>
           <Center py={10} h="100%" w="100%" overflow="hidden">
             {/* <Document
             file="/pdf/termsandpolices.pdf"
@@ -180,7 +180,7 @@ export default function Home() {
           </Box>
         </Box>
         <Box bg="blue.500">
-          <Box w={720} mx="auto" py={12} mt={10}>
+          <Box maxW={720} mx="auto" py={12} mt={10} px={4}>
             <Form
               name="subscription"
               ref={formRef}
@@ -199,6 +199,7 @@ export default function Home() {
                   mt={4}
                   width="100%"
                   borderRadius={4}
+                  fontSize={{ base: 'sm', md: 'xl' }}
                 >
                   Li e aceito os termos e condições
                 </Button>
