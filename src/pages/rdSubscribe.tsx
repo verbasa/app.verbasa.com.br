@@ -70,7 +70,10 @@ export default function Home() {
           body: encodedData,
         })
           .then(() => {
-            window.location.assign(eduzzPaymentUri);
+            setTimeout(() => {
+              window.location.assign(eduzzPaymentUri);
+            }, 800);
+
             reset();
           })
           .catch((error) => {
