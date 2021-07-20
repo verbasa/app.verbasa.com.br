@@ -8,9 +8,9 @@ export default function Home() {
       <Box textAlign="center" py={10} h="100%" w="100%" overflow="hidden">
         <p>Página inicial de aplicações da Verbasa.</p>
         <p>Clique na logo para ir para o site.</p>
-        <NextLink href="/rdSignup">
-          <a>Sign Up test page</a>
-        </NextLink>
+        {/* <NextLink href="/rdSubscribe">
+          <a>Subscribe test page</a>
+        </NextLink> */}
       </Box>
     </Layout>
   );
