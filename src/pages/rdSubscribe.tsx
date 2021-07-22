@@ -21,12 +21,14 @@ import { validateCPF } from 'validations-br';
 
 // import { Document, Page } from 'react-pdf';
 
-import { pdfjs } from 'react-pdf';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+// import { pdfjs } from 'react-pdf';
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 // import PDFViewer from 'pdf-viewer-reactjs';
 
-const linkEduzz = 'https://sun.eduzz.com/922109';
+// const linkEduzz = 'https://sun.eduzz.com/922109';
+const linkEduzz = 'https://nocuda.paulinholamana.com/operenaverbasa';
+
 const facebookPixelID = '523637392210523';
 
 export default function Home() {
