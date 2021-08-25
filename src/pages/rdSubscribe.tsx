@@ -26,8 +26,8 @@ import { validateCPF } from 'validations-br';
 
 // import PDFViewer from 'pdf-viewer-reactjs';
 
-// const linkEduzz = 'https://sun.eduzz.com/922109';
-const linkEduzz = 'https://nocuda.paulinholamana.com/operenaverbasa';
+const linkEduzz = 'https://sun.eduzz.com/922109';
+// const linkEduzz = 'https://nocuda.paulinholamana.com/operenaverbasa';
 
 const facebookPixelID = '523637392210523';
 
@@ -212,6 +212,10 @@ export default function Home() {
             >
               <Flex width="100%" direction="column">
                 <MetaInput name="name" placeholder="Nome completo" />
+
+                <Text mb={2} color="white">
+                  Favor usar um email DIFERENTE ao que usou na B3 ou corretoras.
+                </Text>
                 <MetaInput name="email" placeholder="E-mail" />
                 <MetaInput name="cpf" placeholder="CPF" />
                 <MetaInput name="plan" defaultValue="nacional" hidden />
